@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/deadlands-character-builder/static/css/main.eef8358e.chunk.css",
-    "main.js": "/deadlands-character-builder/static/js/main.920a32ef.chunk.js",
-    "main.js.map": "/deadlands-character-builder/static/js/main.920a32ef.chunk.js.map",
+    "main.js": "/deadlands-character-builder/static/js/main.667b6221.chunk.js",
+    "main.js.map": "/deadlands-character-builder/static/js/main.667b6221.chunk.js.map",
     "runtime-main.js": "/deadlands-character-builder/static/js/runtime-main.c0a1e269.js",
     "runtime-main.js.map": "/deadlands-character-builder/static/js/runtime-main.c0a1e269.js.map",
     "static/css/2.d34346ea.chunk.css": "/deadlands-character-builder/static/css/2.d34346ea.chunk.css",
     "static/js/2.a451225f.chunk.js": "/deadlands-character-builder/static/js/2.a451225f.chunk.js",
     "static/js/2.a451225f.chunk.js.map": "/deadlands-character-builder/static/js/2.a451225f.chunk.js.map",
     "index.html": "/deadlands-character-builder/index.html",
-    "precache-manifest.7dea356434714f499c5d8c5eeb9e688f.js": "/deadlands-character-builder/precache-manifest.7dea356434714f499c5d8c5eeb9e688f.js",
+    "precache-manifest.00a0cc9662540ced3c75fbd83448853c.js": "/deadlands-character-builder/precache-manifest.00a0cc9662540ced3c75fbd83448853c.js",
     "service-worker.js": "/deadlands-character-builder/service-worker.js",
     "static/css/2.d34346ea.chunk.css.map": "/deadlands-character-builder/static/css/2.d34346ea.chunk.css.map",
     "static/css/main.eef8358e.chunk.css.map": "/deadlands-character-builder/static/css/main.eef8358e.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.d34346ea.chunk.css",
     "static/js/2.a451225f.chunk.js",
     "static/css/main.eef8358e.chunk.css",
-    "static/js/main.920a32ef.chunk.js"
+    "static/js/main.667b6221.chunk.js"
   ]
 }

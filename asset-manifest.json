@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.b9286753.chunk.css",
-    "main.js": "/static/js/main.abdb5b09.chunk.js",
-    "main.js.map": "/static/js/main.abdb5b09.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.408cf8d1.js",
-    "runtime-main.js.map": "/static/js/runtime-main.408cf8d1.js.map",
-    "static/css/2.d34346ea.chunk.css": "/static/css/2.d34346ea.chunk.css",
-    "static/js/2.be555d5e.chunk.js": "/static/js/2.be555d5e.chunk.js",
-    "static/js/2.be555d5e.chunk.js.map": "/static/js/2.be555d5e.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.02c8438795b34c93f5142c6ff2cf95cc.js": "/precache-manifest.02c8438795b34c93f5142c6ff2cf95cc.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.d34346ea.chunk.css.map": "/static/css/2.d34346ea.chunk.css.map",
-    "static/css/main.b9286753.chunk.css.map": "/static/css/main.b9286753.chunk.css.map",
-    "static/js/2.be555d5e.chunk.js.LICENSE.txt": "/static/js/2.be555d5e.chunk.js.LICENSE.txt"
+    "main.css": "/deadlands-character-builder/static/css/main.b9286753.chunk.css",
+    "main.js": "/deadlands-character-builder/static/js/main.ad1bd506.chunk.js",
+    "main.js.map": "/deadlands-character-builder/static/js/main.ad1bd506.chunk.js.map",
+    "runtime-main.js": "/deadlands-character-builder/static/js/runtime-main.c0a1e269.js",
+    "runtime-main.js.map": "/deadlands-character-builder/static/js/runtime-main.c0a1e269.js.map",
+    "static/css/2.d34346ea.chunk.css": "/deadlands-character-builder/static/css/2.d34346ea.chunk.css",
+    "static/js/2.be555d5e.chunk.js": "/deadlands-character-builder/static/js/2.be555d5e.chunk.js",
+    "static/js/2.be555d5e.chunk.js.map": "/deadlands-character-builder/static/js/2.be555d5e.chunk.js.map",
+    "index.html": "/deadlands-character-builder/index.html",
+    "precache-manifest.ea6c3bf87309bea59bb5b01681679efe.js": "/deadlands-character-builder/precache-manifest.ea6c3bf87309bea59bb5b01681679efe.js",
+    "service-worker.js": "/deadlands-character-builder/service-worker.js",
+    "static/css/2.d34346ea.chunk.css.map": "/deadlands-character-builder/static/css/2.d34346ea.chunk.css.map",
+    "static/css/main.b9286753.chunk.css.map": "/deadlands-character-builder/static/css/main.b9286753.chunk.css.map",
+    "static/js/2.be555d5e.chunk.js.LICENSE.txt": "/deadlands-character-builder/static/js/2.be555d5e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.408cf8d1.js",
+    "static/js/runtime-main.c0a1e269.js",
     "static/css/2.d34346ea.chunk.css",
     "static/js/2.be555d5e.chunk.js",
     "static/css/main.b9286753.chunk.css",
-    "static/js/main.abdb5b09.chunk.js"
+    "static/js/main.ad1bd506.chunk.js"
   ]
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Switch, Route, Redirect } from 'react-router';
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import browserHistory from './utils/browserHistory';
 import { ToastContainer } from 'react-toastify';
 
@@ -11,7 +11,7 @@ import PointsBar from './features/points/PointsBar';
 
 const App = () => {
 	return (
-		<Router history={browserHistory}>
+		<HashRouter>
 			<ToastContainer
 				position="bottom-right"
 				autoClose={3000}
@@ -45,7 +45,7 @@ const App = () => {
 				</div>
 				<PointsBar />
 			</main>
-		</Router>
+		</HashRouter>
 	);
 };
 

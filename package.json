@@ -1,5 +1,6 @@
 {
 	"name": "deadlands-character-builder",
+	"homepage": "http://przekwas.github.io/deadlands-character-builder",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {

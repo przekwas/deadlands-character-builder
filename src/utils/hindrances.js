@@ -514,5 +514,84 @@ export default [
 		long:
 			'Your character is more susceptible to a  specific Power Type, such as  ice and cold, fire and heat, radiation, magic,  darkness, light, air, sound, and so on.  He suffers +4 damage when hit by an  attack of that type, or –4 to resist other types  of effects.  As a Major Hindrance, the hero or villain is  incredibly vulnerable to the Power Type and  should avoid it at all costs. He still resists at  –4 but damage is doubled.',
 		kind: 'major or minor'
+	},
+	{
+		id: '71',
+		name: "Ailin'",
+		short: '-1/-2 to Fatigue rolls',
+		long:
+			'Medicine is a rudimentary science on the wild frontier, and there are worse ways to die than a severe case of lead poisoning. This Hindrance is reserved for ailment-ridden hombres with a cold grave in their near future. Like Doc Holliday, your hero has a reservation with the undertaker. It’s just not been confirmed yet. The cause of his future demise is something like consumption (tuberculosis), diabetes, or cancer. \n\nWhen a cowpoke has this Hindrance at the Minor level, he always subtracts 1 from Fatigue rolls made to resist physical exertion (but not Agility rolls to avoid suffering bumps and bruises). He’s in the earliest stages of the disease and may not even be diagnosed yet. If this is a Major Hindrance, your hombre subtracts 2 from Fatigue rolls made to resist physical exertion (though not Agility rolls to avoid bumps and bruises). It’s impossible to hide the fact that he’s ill, and everybody can tell that death’s walking one step behind him. In either case, at the end of every game session the lunger must make a Vigor roll. On a failure, the disease gets worse. \n\nThe Minor version of this Hindrance becomes the Major version. If the hero already has the Major Hindrance, he dies at the end of the next session in which he fails a Fatigue check (or at an appropriate time chosen by the Marshal)',
+		kind: 'major or minor'
+	},
+	{
+		id: '72',
+		name: 'Bad Dreams',
+		short: '-1 fate chip at the start of the session',
+		long:
+			"Your hombre doesn't sleep well. In fact, the Land of Nod is a constant nightmare for him.  He tosses and turns like a demon on a rack, and likely keeps everyone within a dozen yards of hima wake with his nightly torment.\n\nThe cowpoke begins each game session with 1 less Fate chip to represent his constantly tired state.  This is cumulative with Bad Luck.",
+		kind: 'major'
+	},
+	{
+		id: '73',
+		name: "Grim Servant o' Death",
+		short: '1 on attack die result in hitting an allied character instead',
+		long:
+			"Your hero's a killer.  His family's probably pushing daisies, his enemies are worm food, and even a few of his friends have holes in them that are suspiciously the same caliber as his very own shootin' iron.\n\nThe good news is your hombre adds +1 to every damage roll he ever makes, whether it's from Fighting, Shooting, Spellcasting, or even Throwing things. The downside is that your hero winds up in the hoosegow or on the run a lot.  But there's more than that, amigo.  Any Shooting or Throwing attack roll that comes up 1 on the skill die automatically hits the nearest friendly character in sight -- whether they're in the line of fire or not.  Other player's characters are always first choice, but an allied Extra will do in a pinch.\n\nEven hand-to-hand attacks hit allies when that mean old 1 comes up. This may require a little imagination, but either the weapon flies out of the hero's hand and strikes his friend, or the hero's hand strikes his friend, or the hero must move adjacent to his erstwhile comrade and 'accidentally' whack him.\n\nIn either case, snake eyes on the attack roll adds an additional d6 to the damage (as if the cowpoke hit with a raise).",
+		kind: 'major'
+	},
+	{
+		id: '74',
+		name: 'Heavy Sleeper',
+		short: '-4 to Notice rolls when waking up, -4 to Vigor rolls when made to stay awake.',
+		long: null,
+		kind: 'minor'
+	},
+	{
+		id: '75',
+		name: "Lyin' Eyes",
+		short: '-2 to all Intimidation and Persuasion rolls where lies must be told.',
+		long:
+			"Lies just don't come easy to this hombre.  That sounds all good and noble, but often cause problems when deadling with more nefarious types.  A hero with this Hindrance suffers a -2 penalty to all Intimidation and Persuasion rolls where lies -- even little white ones -- must be told.  What's worse, if your hero is planning to make his money playing poker, the penalty also applies to bluffing.  That's -2 to your Gambling rolls in a poker game as well, compadre!",
+		kind: 'minor'
+	},
+	{
+		id: '76',
+		name: 'Old Ways Oath',
+		short: 'Your character refuses to touch modern devices, vehicles, and weapons.',
+		long:
+			"Whether your hero is an Indian or he's gone native, he's decided to forego modern technology to honor the spirits. As a Minor Hindrance, he will travel in modern conveyances such as trains or steam agons, but won't use any modern device himself (including guns, steel knives/tomahawks, etc.).\n\nAs a Major Hindrance, he won't even passively use such devices, refusing to ride in anything more complex than a horse-drawn wagon (and unhappy to do even that).",
+		kind: 'major or minor'
+	},
+	{
+		id: '77',
+		name: 'Slowpoke',
+		short: '-1 to Pace.',
+		long:
+			"Molasses on a cold dady moves faster than your hero.  Reduces his Pace by 1.  This is cumulative with the Lame Hindrance if you really want to put yourself in for the next tortoise and hare race.  We'll leave you to figure out which one you are.",
+		kind: 'minor'
+	},
+	{
+		id: '78',
+		name: 'Tenderfoot',
+		short: '-1 to Grit',
+		long:
+			"Some dudes aren't cut out for the the dangers that await on the wild frontier, and your hero is one such greenhorn. For as long he's been out West, he's never really seemed to fit.\n\nYour poor hero suffers -1 Grit as a result of his inexperience in the ways of the West. A hero with this Hindrance can't take the True Grit edge.\n\nOf course, this doesn't last forever. The reason Tenderfoot is only a Minor Hindrance is that it can be removed. Once a hero has reached Seasoned rank, he can buy Tenderfoot off by giving up the opportunity to level up one time. This removes the Grit penalty and the restriction to taking the True Grit Edge.",
+		kind: 'minor'
+	},
+	{
+		id: '79',
+		name: 'Thin Skinned',
+		short: '-1 to all actions, additional -1 per wound.',
+		long:
+			"Every little ol' cut and scrape makes your cowpoke cry for mama. As long as he has at least one wound, he suffers an additional -1 penalty to all actions (so a hero with 2 wounds would suffer a -3, for example).",
+		kind: 'major'
+	},
+	{
+		id: '80',
+		name: 'Wanted',
+		short: '-1 to all actions, additional -1 per wound.',
+		long:
+			"Whether or not your cowpoke did something wrong, the law thinks he did! His face is on posters all over the territory, and maybe farhter afield too. The nature of the crime and the Marshal's sense of 'sport' determines how far and wide the charges may have circulated, but someone somewhere is looking for you.\n\nAs well as having someone after his hide, your hombre also has a price on his head. For the Minor version, there's a reward of 1d6 x $100. A Major Hindrance ups the bounty to a tempting 1d6 x $1000. The player and the Marshal should agree where the bounty can be collected.",
+		kind: 'major'
 	}
 ];

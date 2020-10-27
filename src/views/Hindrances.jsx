@@ -15,11 +15,16 @@ const Hindrances = () => {
 								<span className="text-xs">{hindrance.kind}</span>
 							</div>
 							<div className="px-8 py-4">
-								<div className="text-xl">
-									{hindrance.short}
-								</div>
+								<div className="text-xl">{hindrance.short}</div>
 								<div className="mt-4">
-									{hindrance.long}
+									{hindrance.long
+										? hindrance.long.split('\n').map((p, i) => (
+												<p key={i}>
+													{p}
+													<br />
+												</p>
+										  ))
+										: hindrance.long}
 								</div>
 							</div>
 						</div>

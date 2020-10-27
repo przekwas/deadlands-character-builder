@@ -29,7 +29,7 @@ const Edges = () => {
 						<span className="ml-2 text-sm">Agility</span>
 					</label>
 				</div>
-                <div>
+				<div>
 					<label className="inline-flex items-center">
 						<input
 							type="checkbox"
@@ -41,7 +41,7 @@ const Edges = () => {
 						<span className="ml-2 text-sm">Smarts</span>
 					</label>
 				</div>
-                <div>
+				<div>
 					<label className="inline-flex items-center">
 						<input
 							type="checkbox"
@@ -53,7 +53,7 @@ const Edges = () => {
 						<span className="ml-2 text-sm">Spirit</span>
 					</label>
 				</div>
-                <div>
+				<div>
 					<label className="inline-flex items-center">
 						<input
 							type="checkbox"
@@ -65,7 +65,7 @@ const Edges = () => {
 						<span className="ml-2 text-sm">Strength</span>
 					</label>
 				</div>
-                <div>
+				<div>
 					<label className="inline-flex items-center">
 						<input
 							type="checkbox"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Switch, Route } from 'react-router';
+import { Router, Switch, Route, Redirect } from 'react-router';
 import browserHistory from './utils/browserHistory';
 import { ToastContainer } from 'react-toastify';
 
@@ -24,14 +24,22 @@ const App = () => {
 				<Navbar />
 				<div className="flex-1 overflow-y-auto">
 					<Switch>
-						<Route exact path={process.env.PUBLIC_URL + '/traits'}>
-							<Home />
-						</Route>
 						<Route exact path={process.env.PUBLIC_URL + '/'}>
+							<h1 className="mt-10 text-2xl text-center text-red-900">
+								Use the Navbar lol idk
+							</h1>
+						</Route>
+						<Route exact path={process.env.PUBLIC_URL + '/edges'}>
 							<Edges />
 						</Route>
 						<Route exact path={process.env.PUBLIC_URL + '/hindrances'}>
 							<Hindrances />
+						</Route>
+						<Route exact path={process.env.PUBLIC_URL + '/traits'}>
+							<Home />
+						</Route>
+						<Route>
+							<Redirect to="/" />
 						</Route>
 					</Switch>
 				</div>

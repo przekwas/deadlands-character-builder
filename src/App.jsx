@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import Navbar from './components/Navbar';
 import Home from './views/Home';
 import Edges from './views/Edges';
+import Hindrances from './views/Hindrances';
 import PointsBar from './features/points/PointsBar';
 
 const App = () => {
@@ -28,6 +29,9 @@ const App = () => {
 						</Route>
 						<Route exact path={process.env.PUBLIC_URL + '/'}>
 							<Edges />
+						</Route>
+						<Route exact path={process.env.PUBLIC_URL + '/hindrances'}>
+							<Hindrances />
 						</Route>
 					</Switch>
 				</div>

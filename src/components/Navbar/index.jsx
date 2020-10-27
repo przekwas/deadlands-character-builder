@@ -8,8 +8,8 @@ import NavList from './NavList';
 import NavItem from './NavItem';
 
 const Navbar = () => {
-    const [show, setShow] = React.useState(false);
-    
+	const [show, setShow] = React.useState(false);
+
 	return (
 		<>
 			<NavLayout>
@@ -18,8 +18,9 @@ const Navbar = () => {
 					<Hamburger toggle={() => setShow(!show)} />
 				</CollapseNav>
 				<NavList show={show}>
-					<NavItem to={process.env.PUBLIC_URL + '/traits'} text="Traits" />
+					<NavItem to={process.env.PUBLIC_URL + '/hindrances'} text="Hindrances" />
 					<NavItem to={process.env.PUBLIC_URL + '/'} text="Edges" />
+					<NavItem to={process.env.PUBLIC_URL + '/traits'} text="Traits" />
 				</NavList>
 			</NavLayout>
 		</>

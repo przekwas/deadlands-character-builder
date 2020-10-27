@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67e55686fe41cd56fea1b84ad28fb3b4",
+    "revision": "2fe138f89265702196a6f32b2818cccd",
     "url": "/deadlands-character-builder/index.html"
   },
   {

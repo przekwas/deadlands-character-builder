@@ -1504,8 +1504,5 @@ export default [
 		category: 'Combat',
 		summary:
 			'Your pistolero has mastered the fine art of loading his six-gun in an all-fired hurry. Your hero can reload one weapon on his action, ignoring the usual –2 penalty to Shooting rolls in the same round. If your hero is using a weapon that requires a full round or more to reload, the time required is reduced by 1 round.'
-	},
-	{
-		
 	}
 ];

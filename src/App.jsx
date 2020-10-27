@@ -38,8 +38,10 @@ const App = () => {
 						<Route exact path={process.env.PUBLIC_URL + '/traits'}>
 							<Home />
 						</Route>
-						<Route>
-							<Redirect to="/" />
+						<Route path={'*'}>
+							<h1 className="mt-10 text-2xl text-center text-red-900">
+								Use the Navbar lol idk
+							</h1>
 						</Route>
 					</Switch>
 				</div>

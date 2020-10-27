@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/deadlands-character-builder/precache-manifest.0acc9e7bd9a299134be6b308896dc19f.js"
+  "/deadlands-character-builder/precache-manifest.8b964e53f259480246ecc50a2530d57c.js"
 );
 
 self.addEventListener('message', (event) => {

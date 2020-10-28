@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "25078b93a549703acf38e7603f41aa7a",
+    "revision": "f3203739afc0d17251072b41a89c13da",
     "url": "/deadlands-character-builder/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/deadlands-character-builder/static/css/2.d34346ea.chunk.css"
   },
   {
-    "revision": "ada694786c488453b7fc",
+    "revision": "20994d59f84de699bd1f",
     "url": "/deadlands-character-builder/static/css/main.b9286753.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/deadlands-character-builder/static/js/2.27a85f61.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ada694786c488453b7fc",
-    "url": "/deadlands-character-builder/static/js/main.1ff0de6b.chunk.js"
+    "revision": "20994d59f84de699bd1f",
+    "url": "/deadlands-character-builder/static/js/main.20321e0c.chunk.js"
   },
   {
     "revision": "2de4d423d5610712a366",

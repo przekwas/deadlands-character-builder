@@ -21,9 +21,10 @@ const App = () => {
 				toastClassName="border-l-4 border-red-900 bg-red-500 text-red-100"
 				progressStyle={{ background: '#c53030' }}
 			/>
-			<main className="flex flex-col h-screen">
+			<main className="flex flex-col">
 				<Navbar />
-				<div className="flex-1 overflow-y-auto">
+				<PointsBar />
+				<div className="overflow-y-auto">
 					<Switch>
 						<Route exact path={process.env.PUBLIC_URL + '/'}>
 							<Approach />
@@ -39,7 +40,6 @@ const App = () => {
 						</Route>
 					</Switch>
 				</div>
-				<PointsBar />
 			</main>
 		</HashRouter>
 	);

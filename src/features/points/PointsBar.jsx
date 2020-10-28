@@ -5,7 +5,7 @@ const PointsBar = () => {
 	const points = useSelector(state => state.points);
 
 	return (
-		<div className="flex items-center justify-between px-2 py-1 text-green-200 bg-green-900 lg:px-8 lg:py-2">
+		<div className="sticky top-0 flex items-center justify-between px-2 py-1 mb-4 text-green-200 bg-green-900 lg:px-8 lg:py-2">
 			<span>
 				<span className="text-xs font-semibold tracking-tighter ">
 					{points.attribute.name.substring(0, 4)}

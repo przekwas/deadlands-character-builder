@@ -4,7 +4,8 @@ import browserHistory from './utils/browserHistory';
 import { ToastContainer } from 'react-toastify';
 
 import Navbar from './components/Navbar';
-import Home from './views/Home';
+import Approach from './views/Approach';
+import TraitsHome from './views/TraitsHome';
 import Edges from './views/Edges';
 import Hindrances from './views/Hindrances';
 import PointsBar from './features/points/PointsBar';
@@ -25,9 +26,7 @@ const App = () => {
 				<div className="flex-1 overflow-y-auto">
 					<Switch>
 						<Route exact path={process.env.PUBLIC_URL + '/'}>
-							<h1 className="mt-10 text-2xl text-center text-red-900">
-								Use the Navbar lol idk
-							</h1>
+							<Approach />
 						</Route>
 						<Route exact path={process.env.PUBLIC_URL + '/edges'}>
 							<Edges />
@@ -36,12 +35,7 @@ const App = () => {
 							<Hindrances />
 						</Route>
 						<Route exact path={process.env.PUBLIC_URL + '/traits'}>
-							<Home />
-						</Route>
-						<Route path={'*'}>
-							<h1 className="mt-10 text-2xl text-center text-red-900">
-								Use the Navbar lol idk
-							</h1>
+							<TraitsHome />
 						</Route>
 					</Switch>
 				</div>

@@ -5,7 +5,7 @@ const initialState = {
 		name: 'Agility',
 		value: 4,
 		skills: {
-			athletics: 4,
+			athletics: 0,
 			boating: 0,
 			driving: 0,
 			fighting: 0,
@@ -22,7 +22,7 @@ const initialState = {
 		skills: {
 			academics: 0,
 			battle: 0,
-			knowledge: 4,
+			knowledge: 0,
 			electronics: 0,
 			gambling: 0,
 			hacking: 0,
@@ -65,10 +65,10 @@ const traitsSlice = createSlice({
 			state[action.payload.attr].value -= action.payload.value;
 		},
 		increaseSkill: (state, action) => {
-			state[action.payload.attr].skills[action.payload.skill].value += action.payload.value;
+			state[action.payload.attr].skills[action.payload.skill] += action.payload.value;
 		},
 		decreaseSkill: (state, action) => {
-			state[action.payload.attr].skills[action.payload.skill].value -= action.payload.value;
+			state[action.payload.attr].skills[action.payload.skill] -= action.payload.value;
 		}
 	}
 });

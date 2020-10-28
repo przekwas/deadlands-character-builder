@@ -1,6 +1,7 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, batch } from 'react-redux';
 import { increaseSkill, decreaseSkill } from '../../features/traits/traitsSlice';
+import { spend, refund } from '../../features/points/pointsSlice';
 import { FaMinusSquare, FaPlusSquare } from 'react-icons/fa';
 
 const capitalize = s => {
@@ -11,10 +12,48 @@ const capitalize = s => {
 const Skills = ({ skills, traitValue, traitName }) => {
 	const dispatch = useDispatch();
 	const handleIncrease = (skill, skillValue) => {
+
+		if (skillValue === 0) {
+			batch(() => {
+				dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 4 }));
+				dispatch(spend({ key: 'skill', value: 1 }));
+			});
+			return;
+		}
+
 		if (skillValue >= traitValue) {
-			dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
+			batch(() => {
+				dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
+				dispatch(spend({ key: 'skill', value: 2 }));
+			});
 		} else {
-			dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 1 }));
+			batch(() => {
+				dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
+				dispatch(spend({ key: 'skill', value: 1 }));
+			});
+		}
+	};
+
+	const handleDecrease = (skill, skillValue) => {
+
+		if (skillValue === 4) {
+			batch(() => {
+				dispatch(decreaseSkill({ attr: traitName.toLowerCase(), skill, value: 4 }));
+				dispatch(refund({ key: 'skill', value: 1 }));
+			});
+			return;
+		}
+
+		if (skillValue >= traitValue) {
+			batch(() => {
+				dispatch(decreaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
+				dispatch(refund({ key: 'skill', value: 2 }));
+			});
+		} else {
+			batch(() => {
+				dispatch(decreaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
+				dispatch(refund({ key: 'skill', value: 1 }));
+			});
 		}
 	};
 
@@ -37,9 +76,12 @@ const Skills = ({ skills, traitValue, traitName }) => {
 								<div>
 									<button
 										className={`${
-											skills[skill] === 4 ? 'invisible' : 'text-green-900'
+											skills[skill] === 0 ? 'invisible' : 'text-green-900'
 										} mx-2 `}>
-										<FaMinusSquare className="text-2xl" />
+										<FaMinusSquare
+											onClick={() => handleDecrease(skill, skills[skill])}
+											className="text-2xl"
+										/>
 									</button>
 
 									<button

@@ -8,8 +8,8 @@ const initialState = {
 	},
 	skill: {
 		name: 'Skills',
-		value: 12,
-		max: 12
+		value: 14,
+		max: 14
 	},
 	edge: {
 		name: 'Edges',

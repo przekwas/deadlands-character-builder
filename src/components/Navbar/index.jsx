@@ -18,6 +18,7 @@ const Navbar = () => {
 					<Hamburger toggle={() => setShow(!show)} />
 				</CollapseNav>
 				<NavList show={show}>
+					<NavItem to={process.env.PUBLIC_URL + '/'} text="Approach" />
 					<NavItem to={process.env.PUBLIC_URL + '/hindrances'} text="Hindrances" />
 					<NavItem to={process.env.PUBLIC_URL + '/edges'} text="Edges" />
 					<NavItem to={process.env.PUBLIC_URL + '/traits'} text="Traits" />

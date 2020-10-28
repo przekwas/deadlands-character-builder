@@ -1504,5 +1504,115 @@ export default [
 		category: 'Combat',
 		summary:
 			'Your pistolero has mastered the fine art of loading his six-gun in an all-fired hurry. Your hero can reload one weapon on his action, ignoring the usual –2 penalty to Shooting rolls in the same round. If your hero is using a weapon that requires a full round or more to reload, the time required is reduced by 1 round.'
+	},
+	{
+		id: 150,
+		name: 'Card Sharp',
+		requirements: 'Gambling d6',
+		tier: 'Novice',
+		category: 'Social',
+		summary:
+			'Your hero has a way with a deck and never feels more at home than when he’s shuffling cards. He’s learned a whole heap of ways to cut, shuffle, and deal that give him an edge in a game. A gambler with this Edge only gets caught cheating on a roll of snake eyes. What’s more, if your hero’s a Huckster, folks get a –2 to Notice rolls when trying to spot a hex being cast.'
+	},
+	{
+		id: 151,
+		name: 'Reputation',
+		requirements: 'WC',
+		tier: 'Veteran',
+		category: 'Social',
+		summary:
+			'Whether the character is branded a hero or villain, he has earned a reputation across the West. He may add his Charisma to Intimidation rolls. A negative score is treated as positive for this purpose (and the character has a bad reputation).'
+	},
+	{
+		id: 152,
+		name: 'True Grit',
+		requirements: 'WC, Spirit d8',
+		tier: 'Novice',
+		category: 'Social',
+		summary:
+			'Some folks just seem to exude toughness, and your hero is one of them. The horrors of life in the Weird West don’t faze this hombre. He’s got gravel in his gut and ice water running through his veins. Your hero’s cool demeanor gives him +1 Grit.'
+	},
+	{
+		id: 153,
+		name: 'Agent',
+		requirements:
+			'Smarts d8, Fighting d6, Knowledge (Law) d4, Knowledge (Occult) d6, Investigation d6,  Shooting d6',
+		tier: 'Seasoned',
+		category: 'Professional',
+		summary:
+			"The shadowy Agency is the Union’s answer to the mysterious occurrences some say are happening in the world. Its Agents are a secretive lot, and do not share information outside their ranks if they can avoid it, not even with the local law. This Edge is for full-time Agents beholden to the Agency. Other characters may work for the Agency on a parttime “troubleshooter” basis, but only those who work for the Agency every minute of every day of their lives until they retire (rarely) or die (much more common) should take this Edge. Agents are expected to spy on the enemies of the Union, seek out and contain, destroy, or capture weird creatures, and generally follow the orders handed down to them by the Agency itself. These secretive servants of the Union have jurisdiction anywhere within its borders, but are expected not to reveal their credentials except under extreme and desperate circumstances. Agents receive a free Gatling pistol upon completion of their training course and always add +1 to their Guts checks. Agents are simply ranked as Grade 0 through 5. Grade 6 is reserved for the legendary leader of the Agency, the “Ghost,” though rumors of his recent demise are widely circulated. Makin' Heroes 41 Agent characters begin at Grade 0, and test for promotion upon the completion of each assignment or the destruction of some great evil (Marshal’s call). See the Promotion Table on the left for the procedure. Pay is $40 per month at Grade 0, though Agents have access to more funds on a temporary and returnable basis, as shown on the table below. These allotments are rough guidelines per month—not absolutes. If an Agent absolutely needs people, equipment, or other resources beyond his rank to stop some unholy threat, he’ll either get it or a more senior Agent will be sent out to take over. If a more senior Agent is needed, however, that Agent will most likely get the promotion and accolades instead."
+	},
+	{
+		id: 154,
+		name: 'Scout',
+		requirements: 'Notice d6, Tracking d6',
+		tier: 'Novice',
+		category: 'Professional',
+		summary:
+			'Scouts have learned to watch the signs and trust their instincts when it comes to navigating the vast wilderness. Any time the Marshal draws a face card while traveling (indicating a random encounter has occurred), a scout may make a Notice roll (–2). If successful, the scout detects the hazard, creature, or situation at the earliest opportunity, likely giving his party time to avoid it or at least attack it on their own terms. Don’t forget to remind the Marshal you have this Edge if your posse’s going to be traveling. Scouts also gain +2 to Notice rolls made to avoid surprise in tactical situations.'
+	},
+	{
+		id: 155,
+		name: 'Snakeoil Salesmen',
+		requirements: 'Smarts d6, Spirit d6, Persuasion d8',
+		tier: 'Novice',
+		category: 'Professional',
+		summary:
+			'With honey-dewed lips that weave lies and fabrications like they were the Gospel truth, this smooth talker could sell salt to the Mormons and buffalo hides to Indians. The character gains a +2 bonus to noncombat Persuasion rolls. He can also use his forked tongue to initiate a Persuasion Test of Will, opposed by the target’s Smarts.'
+	},
+	{
+		id: 156,
+		name: 'Soldier',
+		requirements: 'WC',
+		tier: 'Novice',
+		category: 'Professional',
+		summary:
+			'A hero with this Edge may start as a private, NCO, or officer when he takes this Edge. Each step comes with its own perks and responsibilities—it’s not necessarily better to be an officer instead of an NCO or private. Characters may progress upward from their current rank by making Promotion rolls (see the Promotion Table). Note that the Union Army pays slightly better than its Confederate counterpart, as noted under Rank Hath Its Privileges. Characters may also be demoted a number of ranks if they perform poorly, abandon their post, disobey orders, or otherwise operate outside the code of military conduct. Demotions are subjective and entirely up to the Marshal, and no roll is required. Soldiers are on duty 24 hours a day, seven days a week. Those who decide to run off on personal adventures without permission may find themselves victims of a court martial or even summary execution! Characters aren’t expected to take entire companies on traditional adven­tures, of course (though this is Savage Worlds, so they could!), but the Rank Table lists the resources they may be able to draw upon if the situation warrants.'
+	},
+	{
+		id: 157,
+		name: 'Tale Teller',
+		requirements: 'Persuasion d8',
+		tier: 'Novice',
+		category: 'Professional',
+		summary:
+			'A good storyteller not only entertains, he gives hope and comfort as well. Sodbusters and saddletramps in the Weird West can use all the hope and comfort they can find. We don’t want to say too much, but good tale tellers are critical to saving the world. What? The world needs saving? You bet it does. You’ll discover why eventually. In the meantime, know that spreading the tales of your posse’s derring-do is far more important in the grand scheme of things than the ability to fire a gun or ride. So if you do something amazing, bucko, tell people about it! The Marshal’s Handbook has the skinny on all this, but you need to know what the Edge does, so we’ll share this much with you now. When making a Persuasion roll to tell a tale of his posse’s exploits, an orator with this Edge gains a +2 bonus. Furthermore, where most tale tellers bungle the story when they roll a 1 on the Persuasion die (regardless of the result of the Wild Die), your hero does so only on a roll of snake eyes. When a tale teller with this Edge successfully lowers a Fear Level, he gets a one-time, one-use Legend Chip all his own (it doesn’t go into the players’ pot like other Fate Chips do, it goes straight to the player). Talk to the Marshal about this, amigo. We’ve already told you more than we should.'
+	},
+	{
+		id: 158,
+		name: 'Texas Ranger',
+		requirements:
+			'Vigor d8, Fighting d6, Riding d6, Shooting d6, Streetwise d6, Survival d6, Tracking d6',
+		tier: 'Seasoned',
+		category: 'Professional',
+		summary:
+			'The South uses the Texas Rangers to police its interior. These hardened men hunt the High Plains and other regions for outlaws, bandits, deserters, and Union spies. The Tombstone Epitaph claims that, like the Agency, they are tasked with seeking out stranger prey as well, but only crackpots believe those bedtime stories, right? Rangers advance along military ranks, but always start as privates. Ranger privates are given a badge (giving them +2 Charisma to those who respect its authority, and jurisdiction over all civilians of the Confederacy), a copy of Fugitives from Justice (giving them +2 to Law-based Common Knowledge rolls), and a general direction to mosey toward. Pay is slightly higher for the Rangers than for their Union counterparts, but Rangers of all ranks are expected to handle things themselves according to the old creed, “One riot, one Ranger.” On the completion of every encounter with outlaws or other weirdness, the Ranger must report in and the Marshal can check for promotion on the promotion table.'
+	},
+	{
+		id: 159,
+		name: 'Wilderness Man',
+		requirements: 'Smarts d8, Vigor d6, Notice d8,  Survival d6, Tracking d6',
+		tier: 'Novice',
+		category: 'Professional',
+		summary:
+			'Whether they live in the high Rockies, the Great Plains, or the deserts, wilderness men are used to the rigors of nature and take extremes of weather in stride. They gain +2 to Survival and Tracking. In addition, lifetimes of exposure to nature’s fury give them a +2 bonus to Vigor rolls to resist Fatigue from Heat or Cold.'
+	},
+	{
+		id: 160,
+		name: 'Fate’s Favored',
+		requirements: 'WC',
+		tier: 'Seasoned',
+		category: 'Weird',
+		summary:
+			'This cowpoke’s got someone watching out for him, and he can trust Lady Luck to come through in a pinch. Once per session, he may spend a Fate Chip of any color and treat it as if it were a blue chip. Fate’s Favored may be selected more than once, but only one time per Rank. Each time you choose it, your hero gains another use of the ability in each session.'
+	},
+	{
+		id: 161,
+		name: 'Knack',
+		requirements: 'WC',
+		tier: 'Novice',
+		category: 'Weird',
+		summary:
+			'This Edge should only be taken during character creation (unless there is a good reason for the hero to “discover” his latent powers at a later date). The Weird West is a superstitious place, where rumors and old wives’ tales abound. Just occasionally, though, these folktales contain a germ of truth. A knack is just that—folklore come true. Well, now you get to choose one of the special events that coincided with the time of your birth. Each one gives you access to a special ability, which you can activate by using a Fate Chip (of any color). If you don’t have a Fate Chip to spare, you can’t use your knack.'
 	}
 ];

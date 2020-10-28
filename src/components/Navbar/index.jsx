@@ -1,4 +1,7 @@
 import React from 'react';
+import { useDispatch, batch } from 'react-redux';
+import { reset as resetPoints } from '../../features/points/pointsSlice';
+import { reset as resetTraits } from '../../features/traits/traitsSlice';
 
 import NavLayout from './NavLayout';
 import CollapseNav from './CollapseNav';
@@ -7,8 +10,47 @@ import Hamburger from './Hamburger';
 import NavList from './NavList';
 import NavItem from './NavItem';
 
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+const Modal = withReactContent(Swal);
+
 const Navbar = () => {
+	const dispatch = useDispatch();
 	const [show, setShow] = React.useState(false);
+
+	const handleModal = () => {
+		Modal.fire({
+			showCancelButton: true,
+			confirmButtonText: `Reset`,
+			icon: 'error',
+			title: <p className="text-red-200">Reset All the Things?</p>,
+			footer: "Don't fuck it up.",
+			customClass: {
+				popup: 'bg-red-900',
+				footer: 'text-red-200',
+				confirmButton: 'bg-red-500 text-red-100',
+				cancelButton: 'bg-orange-100 text-orange-500'
+			}
+		}).then(result => {
+			if (result.isConfirmed) {
+				batch(() => {
+					dispatch(resetPoints());
+					dispatch(resetTraits());
+				});
+				return Modal.fire({
+					icon: 'success',
+					title: <p className="text-red-200">Everything Reset!</p>,
+					customClass: {
+						popup: 'bg-red-900',
+						footer: 'text-red-200',
+						confirmButton: 'bg-red-500 text-red-100',
+						cancelButton: 'bg-orange-100 text-orange-500'
+					}
+				});
+			}
+		});
+	};
 
 	return (
 		<>
@@ -22,6 +64,11 @@ const Navbar = () => {
 					<NavItem to={process.env.PUBLIC_URL + '/hindrances'} text="Hindrances" />
 					<NavItem to={process.env.PUBLIC_URL + '/edges'} text="Edges" />
 					<NavItem to={process.env.PUBLIC_URL + '/traits'} text="Traits" />
+					<li onClick={handleModal} className="nav-item">
+						<span className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-red-200 uppercase cursor-pointer hover:opacity-75">
+							<span className="ml-2">Reset All</span>
+						</span>
+					</li>
 				</NavList>
 			</NavLayout>
 		</>

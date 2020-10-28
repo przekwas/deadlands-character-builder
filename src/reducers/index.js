@@ -15,10 +15,10 @@ const storeOptions = {
 	reducer
 }
 
-// const data = localStorage.getItem(STORAGE_KEY) || null;
-// if (data) {
-// 	storeOptions['preloadedState'] = JSON.parse(data)
-// }
+const data = localStorage.getItem(STORAGE_KEY) || null;
+if (data) {
+	storeOptions['preloadedState'] = JSON.parse(data)
+}
 
 const store = configureStore(storeOptions);
 

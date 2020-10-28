@@ -31,7 +31,7 @@ const initialState = {
 			occult: 0,
 			spellcasting: 0,
 			taunt: 0,
-			survival: 0,
+			survival: 0
 		}
 	},
 	spirit: {
@@ -70,10 +70,17 @@ const traitsSlice = createSlice({
 		},
 		decreaseSkill: (state, action) => {
 			state[action.payload.attr].skills[action.payload.skill] -= action.payload.value;
-		}
+		},
+		reset: state => initialState
 	}
 });
 
-export const { increaseAttr, decreaseAttr, increaseSkill, decreaseSkill } = traitsSlice.actions;
+export const {
+	increaseAttr,
+	decreaseAttr,
+	increaseSkill,
+	decreaseSkill,
+	reset
+} = traitsSlice.actions;
 
 export default traitsSlice.reducer;

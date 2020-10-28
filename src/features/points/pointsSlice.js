@@ -37,10 +37,11 @@ const pointsSlice = createSlice({
 		},
 		refund: (state, action) => {
 			state[action.payload.key].value += action.payload.value;
-		}
+		},
+		reset: state => initialState
 	}
 });
 
-export const { spend, refund } = pointsSlice.actions;
+export const { spend, refund, reset } = pointsSlice.actions;
 
 export default pointsSlice.reducer;

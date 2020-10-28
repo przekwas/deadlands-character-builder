@@ -57,7 +57,7 @@ const Skills = ({ skills, traitValue, traitName }) => {
 			return;
 		}
 
-		if (skillValue >= traitValue) {
+		if (skillValue > traitValue) {
 			batch(() => {
 				dispatch(decreaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
 				dispatch(refund({ key: 'skill', value: 2 }));

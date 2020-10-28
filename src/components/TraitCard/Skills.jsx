@@ -22,7 +22,9 @@ const Skills = ({ skills, traitValue, traitName }) => {
 
 		if (skillValue === 0) {
 			batch(() => {
-				dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 4 }));
+				dispatch(
+					increaseSkill({ attr: traitName.toLowerCase(), skill, value: 4, cost: 1 })
+				);
 				dispatch(spend({ key: 'skill', value: 1 }));
 			});
 			return;
@@ -35,24 +37,27 @@ const Skills = ({ skills, traitValue, traitName }) => {
 			}
 
 			batch(() => {
-				dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
+				dispatch(
+					increaseSkill({ attr: traitName.toLowerCase(), skill, value: 2, cost: 2 })
+				);
 				dispatch(spend({ key: 'skill', value: 2 }));
 			});
 		} else {
-			//possible catch?
-
 			batch(() => {
-				dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
+				dispatch(
+					increaseSkill({ attr: traitName.toLowerCase(), skill, value: 2, cost: 1 })
+				);
 				dispatch(spend({ key: 'skill', value: 1 }));
 			});
 		}
 	};
 
-	const handleDecrease = (skill, skillValue) => {
+	const handleDecrease = (skill, skillValue, spent) => {
+		const value = spent[spent.length - 1];
 		if (skillValue === 4) {
 			batch(() => {
 				dispatch(decreaseSkill({ attr: traitName.toLowerCase(), skill, value: 4 }));
-				dispatch(refund({ key: 'skill', value: 1 }));
+				dispatch(refund({ key: 'skill', value }));
 			});
 			return;
 		}
@@ -60,12 +65,12 @@ const Skills = ({ skills, traitValue, traitName }) => {
 		if (skillValue > traitValue) {
 			batch(() => {
 				dispatch(decreaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
-				dispatch(refund({ key: 'skill', value: 2 }));
+				dispatch(refund({ key: 'skill', value }));
 			});
 		} else {
 			batch(() => {
 				dispatch(decreaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
-				dispatch(refund({ key: 'skill', value: 1 }));
+				dispatch(refund({ key: 'skill', value }));
 			});
 		}
 	};
@@ -79,30 +84,39 @@ const Skills = ({ skills, traitValue, traitName }) => {
 						<div key={`skill-name-${skill}`}>
 							<h3 className="flex items-center justify-between py-2 -mr-4 text-sm font-hairline">
 								<div className="flex justify-between">
-									<span className={`${skills[skill] ? 'font-bold' : null}`}>
+									<span
+										className={`${skills[skill].current ? 'font-bold' : null}`}>
 										{capitalize(skill)}
 									</span>
 									<span className="ml-2 font-bold">
-										{skills[skill] ? `d${skills[skill]}` : null}
+										{skills[skill].current ? `d${skills[skill].current}` : null}
 									</span>
 								</div>
 								<div>
 									<button
 										className={`${
-											skills[skill] === 0 ? 'invisible' : 'text-green-900'
+											skills[skill].current === 0
+												? 'invisible'
+												: 'text-green-900'
 										} mx-2 `}>
 										<FaMinusSquare
-											onClick={() => handleDecrease(skill, skills[skill])}
+											onClick={() =>
+												handleDecrease(skill, skills[skill].current, skills[skill].spent)
+											}
 											className="text-2xl"
 										/>
 									</button>
 
 									<button
 										className={`${
-											skills[skill] === 12 ? 'invisible' : 'text-green-900'
+											skills[skill].current === 12
+												? 'invisible'
+												: 'text-green-900'
 										} mx-2`}>
 										<FaPlusSquare
-											onClick={() => handleIncrease(skill, skills[skill])}
+											onClick={() =>
+												handleIncrease(skill, skills[skill].current)
+											}
 											className="text-2xl"
 										/>
 									</button>

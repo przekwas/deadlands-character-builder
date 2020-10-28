@@ -5,15 +5,42 @@ const initialState = {
 		name: 'Agility',
 		value: 4,
 		skills: {
-			athletics: 0,
-			boating: 0,
-			driving: 0,
-			fighting: 0,
-			piloting: 0,
-			riding: 0,
-			shooting: 0,
-			stealth: 0,
-			thievery: 0
+			athletics: {
+				current: 0,
+				spent: []
+			},
+			boating: {
+				current: 0,
+				spent: []
+			},
+			driving: {
+				current: 0,
+				spent: []
+			},
+			fighting: {
+				current: 0,
+				spent: []
+			},
+			piloting: {
+				current: 0,
+				spent: []
+			},
+			riding: {
+				current: 0,
+				spent: []
+			},
+			shooting: {
+				current: 0,
+				spent: []
+			},
+			stealth: {
+				current: 0,
+				spent: []
+			},
+			thievery: {
+				current: 0,
+				spent: []
+			}
 		}
 	},
 	smarts: {
@@ -66,10 +93,12 @@ const traitsSlice = createSlice({
 			state[action.payload.attr].value -= action.payload.value;
 		},
 		increaseSkill: (state, action) => {
-			state[action.payload.attr].skills[action.payload.skill] += action.payload.value;
+			state[action.payload.attr].skills[action.payload.skill].current += action.payload.value;
+			state[action.payload.attr].skills[action.payload.skill].spent.push(action.payload.cost);
 		},
 		decreaseSkill: (state, action) => {
-			state[action.payload.attr].skills[action.payload.skill] -= action.payload.value;
+			state[action.payload.attr].skills[action.payload.skill].current -= action.payload.value;
+			state[action.payload.attr].skills[action.payload.skill].spent.pop();
 		},
 		reset: state => initialState
 	}

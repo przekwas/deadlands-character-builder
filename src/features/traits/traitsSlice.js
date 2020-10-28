@@ -29,8 +29,9 @@ const initialState = {
 			healing: 0,
 			notice: 0,
 			occult: 0,
+			spellcasting: 0,
 			taunt: 0,
-			survival: 0
+			survival: 0,
 		}
 	},
 	spirit: {

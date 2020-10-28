@@ -1,7 +1,8 @@
 import React from 'react';
-import { useDispatch, batch } from 'react-redux';
+import { useSelector, useDispatch, batch } from 'react-redux';
 import { increaseSkill, decreaseSkill } from '../../features/traits/traitsSlice';
 import { spend, refund } from '../../features/points/pointsSlice';
+import { errorToast } from '../../components/Toast';
 import { FaMinusSquare, FaPlusSquare } from 'react-icons/fa';
 
 const capitalize = s => {
@@ -10,8 +11,14 @@ const capitalize = s => {
 };
 
 const Skills = ({ skills, traitValue, traitName }) => {
+	const skillTotal = useSelector(state => state.points.skill);
 	const dispatch = useDispatch();
+
 	const handleIncrease = (skill, skillValue) => {
+		if (skillTotal.value === 0) {
+			errorToast('Out of Skill Points!');
+			return;
+		}
 
 		if (skillValue === 0) {
 			batch(() => {
@@ -22,11 +29,18 @@ const Skills = ({ skills, traitValue, traitName }) => {
 		}
 
 		if (skillValue >= traitValue) {
+			if (skillTotal.value === 1) {
+				errorToast('Not Enough Skill Points!');
+				return;
+			}
+
 			batch(() => {
 				dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
 				dispatch(spend({ key: 'skill', value: 2 }));
 			});
 		} else {
+			//possible catch?
+
 			batch(() => {
 				dispatch(increaseSkill({ attr: traitName.toLowerCase(), skill, value: 2 }));
 				dispatch(spend({ key: 'skill', value: 1 }));
@@ -35,7 +49,6 @@ const Skills = ({ skills, traitValue, traitName }) => {
 	};
 
 	const handleDecrease = (skill, skillValue) => {
-
 		if (skillValue === 4) {
 			batch(() => {
 				dispatch(decreaseSkill({ attr: traitName.toLowerCase(), skill, value: 4 }));

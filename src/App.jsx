@@ -38,6 +38,9 @@ const App = () => {
 						<Route exact path={process.env.PUBLIC_URL + '/traits'}>
 							<TraitsHome />
 						</Route>
+						<Route path="*">
+							<Approach />
+						</Route>
 					</Switch>
 				</div>
 			</main>

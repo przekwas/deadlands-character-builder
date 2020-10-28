@@ -55,6 +55,7 @@ const Navbar = () => {
 	return (
 		<>
 			<NavLayout>
+			<small className="absolute top-0 left-0 text-indigo-500">v1.3</small>
 				<CollapseNav>
 					<Brand />
 					<Hamburger toggle={() => setShow(!show)} />

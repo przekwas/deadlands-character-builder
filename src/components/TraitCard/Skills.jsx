@@ -101,7 +101,11 @@ const Skills = ({ skills, traitValue, traitName }) => {
 										} mx-2 `}>
 										<FaMinusSquare
 											onClick={() =>
-												handleDecrease(skill, skills[skill].current, skills[skill].spent)
+												handleDecrease(
+													skill,
+													skills[skill].current,
+													skills[skill].spent
+												)
 											}
 											className="text-2xl"
 										/>

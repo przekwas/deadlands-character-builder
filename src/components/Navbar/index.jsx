@@ -3,16 +3,15 @@ import { useDispatch, batch } from 'react-redux';
 import { reset as resetPoints } from '../../features/points/pointsSlice';
 import { reset as resetTraits } from '../../features/traits/traitsSlice';
 import { reset as resetPins } from '../../features/pins/pinsSlice';
-
 import NavLayout from './NavLayout';
 import CollapseNav from './CollapseNav';
 import Brand from './Brand';
 import Hamburger from './Hamburger';
 import NavList from './NavList';
 import NavItem from './NavItem';
-
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { VERSION } from '../../utils/storage';
 
 const Modal = withReactContent(Swal);
 
@@ -35,6 +34,7 @@ const Navbar = () => {
 			}
 		}).then(result => {
 			if (result.isConfirmed) {
+				localStorage.clear();
 				batch(() => {
 					dispatch(resetPoints());
 					dispatch(resetTraits());
@@ -57,7 +57,7 @@ const Navbar = () => {
 	return (
 		<>
 			<NavLayout>
-	<small className="absolute top-0 left-0 text-indigo-500">v1.6</small>
+	<small className="absolute top-0 left-0 text-indigo-500">v{VERSION}</small>
 				<CollapseNav>
 					<Brand />
 					<Hamburger toggle={() => setShow(!show)} />

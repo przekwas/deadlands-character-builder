@@ -4,6 +4,7 @@ import { increaseAttr, decreaseAttr, resetSkills} from './traitsSlice';
 import { spend, refund } from '../points/pointsSlice';
 import { GiMagicPalm } from 'react-icons/gi';
 import { errorToast } from '../../components/Toast';
+import { calcRefund } from './calcRefund';
 import TraitCard from '../../components/TraitCard';
 import TraitButtons from '../../components/TraitCard/TraitButtons';
 
@@ -26,10 +27,12 @@ const Spirit = () => {
 	};
 
 	const handleDecrease = () => {
+		const sum = calcRefund(skills);
 		batch(() => {
 			dispatch(resetSkills({ attr: name.toLowerCase() }));
 			dispatch(decreaseAttr({ attr: name.toLowerCase(), value: 2 }));
 			dispatch(refund({ key: 'attribute', value: 1 }));
+			dispatch(refund({ key: 'skill', value: sum }));
 		});
 	};
 

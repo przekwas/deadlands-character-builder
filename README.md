@@ -28,3 +28,7 @@ Added ability to reset them all as well
 v1.6 Notes:
 
 Added Linked Skills Reset when Refunding Attribute Points, prevent cheap point buy bug
+Refunnding calculated Skill Points when Attribute Refunded
+
+v1.7 Notes:
+If a major state change is released, version will be checked and reset your saved data

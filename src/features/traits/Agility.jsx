@@ -4,8 +4,10 @@ import { increaseAttr, decreaseAttr, resetSkills } from './traitsSlice';
 import { spend, refund } from '../points/pointsSlice';
 import { GiAcrobatic } from 'react-icons/gi';
 import { errorToast } from '../../components/Toast';
+import { calcRefund } from './calcRefund';
 import TraitCard from '../../components/TraitCard';
 import TraitButtons from '../../components/TraitCard/TraitButtons';
+
 
 const Agility = () => {
 	const name = useSelector(state => state.traits.agility.name);
@@ -26,10 +28,12 @@ const Agility = () => {
 	};
 
 	const handleDecrease = () => {
+		const sum = calcRefund(skills);
 		batch(() => {
 			dispatch(resetSkills({ attr: name.toLowerCase() }));
 			dispatch(decreaseAttr({ attr: name.toLowerCase(), value: 2 }));
 			dispatch(refund({ key: 'attribute', value: 1 }));
+			dispatch(refund({ key: 'skill', value: sum }));
 		});
 	};
 

@@ -8,6 +8,7 @@ import Approach from './views/Approach';
 import TraitsHome from './views/TraitsHome';
 import Edges from './views/Edges';
 import Hindrances from './views/Hindrances';
+import Pins from './views/Pins';
 import PointsBar from './features/points/PointsBar';
 
 const App = () => {
@@ -18,8 +19,6 @@ const App = () => {
 				autoClose={3000}
 				draggable={false}
 				pauseOnHover={false}
-				toastClassName="border-l-4 border-red-900 bg-red-500 text-red-100"
-				progressStyle={{ background: '#c53030' }}
 			/>
 			<main className="flex flex-col">
 				<Navbar />
@@ -37,6 +36,9 @@ const App = () => {
 						</Route>
 						<Route exact path={process.env.PUBLIC_URL + '/traits'}>
 							<TraitsHome />
+						</Route>
+						<Route exact path={process.env.PUBLIC_URL + '/pins'}>
+							<Pins />
 						</Route>
 						<Route path="*">
 							<Approach />

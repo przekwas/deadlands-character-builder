@@ -1,5 +1,6 @@
 import React from 'react';
 import EdgeData from '../utils/edges';
+import EdgeCard from '../components/EdgeCard';
 
 const data = EdgeData.filter(edge => edge.tier === 'Novice');
 
@@ -91,27 +92,7 @@ const Edges = () => {
 						}
 					})
 					.map(edge => (
-						<section key={`edge-item-${edge.id}`} className="lg:w-1/2 lg:p-2 xl:w-1/3">
-							<div className="mx-1 mb-6 bg-orange-200 border-2 border-red-900 rounded">
-								<div className="flex items-center justify-between px-4 py-2 text-2xl text-red-200 bg-red-900">
-									{edge.name}
-									<span className="text-xs">{edge.tier}</span>
-								</div>
-								<div className="px-8 py-4">
-									{edge.requirements && (
-										<div className="text-xs font-hairline text-red-700">
-											Requirements
-										</div>
-									)}
-									<div className="font-extrabold text-orange-900">
-										{edge.requirements}
-									</div>
-									<div className={`${edge.requirements && 'mt-4'} text-xl`}>
-										{edge.summary}
-									</div>
-								</div>
-							</div>
-						</section>
+						<EdgeCard key={`edge-item-${edge.id}`} edge={edge} pinnable />
 					))}
 			</div>
 		</>

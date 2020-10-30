@@ -3,12 +3,14 @@ import { combineReducers } from '@reduxjs/toolkit';
 
 import traitsReducer from '../features/traits/traitsSlice';
 import pointsReducer from '../features/points/pointsSlice';
+import pinsReducer from '../features/pins/pinsSlice';
 
 import { cramItIn, STORAGE_KEY } from '../utils/storage';
 
 const reducer = combineReducers({
 	traits: traitsReducer,
-	points: pointsReducer
+	points: pointsReducer,
+	pins: pinsReducer
 });
 
 const storeOptions = {

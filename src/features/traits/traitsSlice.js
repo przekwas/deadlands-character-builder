@@ -47,29 +47,80 @@ const initialState = {
 		name: 'Smarts',
 		value: 4,
 		skills: {
-			academics: 0,
-			battle: 0,
-			knowledge: 0,
-			electronics: 0,
-			gambling: 0,
-			hacking: 0,
-			healing: 0,
-			notice: 0,
-			occult: 0,
-			spellcasting: 0,
-			taunt: 0,
-			survival: 0
+			academics: {
+				current: 0,
+				spent: []
+			},
+			battle: {
+				current: 0,
+				spent: []
+			},
+			knowledge: {
+				current: 0,
+				spent: []
+			},
+			electronics: {
+				current: 0,
+				spent: []
+			},
+			gambling: {
+				current: 0,
+				spent: []
+			},
+			hacking: {
+				current: 0,
+				spent: []
+			},
+			healing: {
+				current: 0,
+				spent: []
+			},
+			notice: {
+				current: 0,
+				spent: []
+			},
+			occult: {
+				current: 0,
+				spent: []
+			},
+			spellcasting: {
+				current: 0,
+				spent: []
+			},
+			taunt: {
+				current: 0,
+				spent: []
+			},
+			survival: {
+				current: 0,
+				spent: []
+			}
 		}
 	},
 	spirit: {
 		name: 'Spirit',
 		value: 4,
 		skills: {
-			faith: 0,
-			focus: 0,
-			intimidation: 0,
-			performance: 0,
-			persuasion: 0
+			faith: {
+				current: 0,
+				spent: []
+			},
+			focus: {
+				current: 0,
+				spent: []
+			},
+			intimidation: {
+				current: 0,
+				spent: []
+			},
+			performance: {
+				current: 0,
+				spent: []
+			},
+			persuasion: {
+				current: 0,
+				spent: []
+			}
 		}
 	},
 	strength: {
@@ -100,6 +151,9 @@ const traitsSlice = createSlice({
 			state[action.payload.attr].skills[action.payload.skill].current -= action.payload.value;
 			state[action.payload.attr].skills[action.payload.skill].spent.pop();
 		},
+		resetSkills: (state, action) => {
+			state[action.payload.attr].skills = initialState[action.payload.attr].skills;
+		},
 		reset: state => initialState
 	}
 });
@@ -109,6 +163,7 @@ export const {
 	decreaseAttr,
 	increaseSkill,
 	decreaseSkill,
+	resetSkills,
 	reset
 } = traitsSlice.actions;
 

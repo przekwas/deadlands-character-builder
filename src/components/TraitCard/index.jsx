@@ -12,6 +12,9 @@ const TraitCard = ({ traitName, traitValue, TraitIcon, children, skills }) => {
 					<h2 className="mx-3 font-extrabold text-orange-900 ">d{traitValue}</h2>
 					<div className="flex items-center">{children}</div>
 				</div>
+				{skills && (
+					<small className="text-xs">*Refunding an Attribute Resets Skills</small>
+				)}
 				<Skills skills={skills} traitValue={traitValue} traitName={traitName} />
 			</div>
 		</>

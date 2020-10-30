@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch, batch } from 'react-redux';
-import { increaseAttr, decreaseAttr } from './traitsSlice';
+import { increaseAttr, decreaseAttr, resetSkills} from './traitsSlice';
 import { spend, refund } from '../points/pointsSlice';
 import { GiMagicPalm } from 'react-icons/gi';
 import { errorToast } from '../../components/Toast';
@@ -27,6 +27,7 @@ const Spirit = () => {
 
 	const handleDecrease = () => {
 		batch(() => {
+			dispatch(resetSkills({ attr: name.toLowerCase() }));
 			dispatch(decreaseAttr({ attr: name.toLowerCase(), value: 2 }));
 			dispatch(refund({ key: 'attribute', value: 1 }));
 		});

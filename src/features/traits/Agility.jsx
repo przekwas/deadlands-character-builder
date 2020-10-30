@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch, batch } from 'react-redux';
-import { increaseAttr, decreaseAttr } from './traitsSlice';
+import { increaseAttr, decreaseAttr, resetSkills } from './traitsSlice';
 import { spend, refund } from '../points/pointsSlice';
 import { GiAcrobatic } from 'react-icons/gi';
 import { errorToast } from '../../components/Toast';
@@ -27,6 +27,7 @@ const Agility = () => {
 
 	const handleDecrease = () => {
 		batch(() => {
+			dispatch(resetSkills({ attr: name.toLowerCase() }));
 			dispatch(decreaseAttr({ attr: name.toLowerCase(), value: 2 }));
 			dispatch(refund({ key: 'attribute', value: 1 }));
 		});
@@ -37,8 +38,7 @@ const Agility = () => {
 			traitName={name}
 			traitValue={agilityValue}
 			TraitIcon={GiAcrobatic}
-			skills={skills}
-		>
+			skills={skills}>
 			<TraitButtons
 				stat={agilityValue}
 				handleDecrease={handleDecrease}

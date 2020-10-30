@@ -14,7 +14,7 @@ Ratchet-ass save feature added that prolly has more bugs for me to fix
 v1.3 Notes:
 
 Added version for test deploy so I know when gh-pages fucking updates
-Fixed refund point bug .. that my other friend found.
+Fixed refund point bug .. that my other friend found
 
 v1.4 Notes:
 
@@ -24,3 +24,7 @@ v1.5 Notes:
 
 Added ability to pin Edges and Hindrances, with a new Navbar link for view pinned choices
 Added ability to reset them all as well
+
+v1.6 Notes:
+
+Added Linked Skills Reset when Refunding Attribute Points, prevent cheap point buy bug

@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/deadlands-character-builder/static/css/main.b9286753.chunk.css",
-    "main.js": "/deadlands-character-builder/static/js/main.8bf9aa2d.chunk.js",
-    "main.js.map": "/deadlands-character-builder/static/js/main.8bf9aa2d.chunk.js.map",
+    "main.js": "/deadlands-character-builder/static/js/main.5361be01.chunk.js",
+    "main.js.map": "/deadlands-character-builder/static/js/main.5361be01.chunk.js.map",
     "runtime-main.js": "/deadlands-character-builder/static/js/runtime-main.c0a1e269.js",
     "runtime-main.js.map": "/deadlands-character-builder/static/js/runtime-main.c0a1e269.js.map",
     "static/css/2.d34346ea.chunk.css": "/deadlands-character-builder/static/css/2.d34346ea.chunk.css",
-    "static/js/2.27a85f61.chunk.js": "/deadlands-character-builder/static/js/2.27a85f61.chunk.js",
-    "static/js/2.27a85f61.chunk.js.map": "/deadlands-character-builder/static/js/2.27a85f61.chunk.js.map",
+    "static/js/2.7e5022ef.chunk.js": "/deadlands-character-builder/static/js/2.7e5022ef.chunk.js",
+    "static/js/2.7e5022ef.chunk.js.map": "/deadlands-character-builder/static/js/2.7e5022ef.chunk.js.map",
     "index.html": "/deadlands-character-builder/index.html",
-    "precache-manifest.3c238a85d2766de9e263d8299ad95a2a.js": "/deadlands-character-builder/precache-manifest.3c238a85d2766de9e263d8299ad95a2a.js",
+    "precache-manifest.3ffbd3f54d4d3bb15c112ac1a4e419a7.js": "/deadlands-character-builder/precache-manifest.3ffbd3f54d4d3bb15c112ac1a4e419a7.js",
     "service-worker.js": "/deadlands-character-builder/service-worker.js",
     "static/css/2.d34346ea.chunk.css.map": "/deadlands-character-builder/static/css/2.d34346ea.chunk.css.map",
     "static/css/main.b9286753.chunk.css.map": "/deadlands-character-builder/static/css/main.b9286753.chunk.css.map",
-    "static/js/2.27a85f61.chunk.js.LICENSE.txt": "/deadlands-character-builder/static/js/2.27a85f61.chunk.js.LICENSE.txt"
+    "static/js/2.7e5022ef.chunk.js.LICENSE.txt": "/deadlands-character-builder/static/js/2.7e5022ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c0a1e269.js",
     "static/css/2.d34346ea.chunk.css",
-    "static/js/2.27a85f61.chunk.js",
+    "static/js/2.7e5022ef.chunk.js",
     "static/css/main.b9286753.chunk.css",
-    "static/js/main.8bf9aa2d.chunk.js"
+    "static/js/main.5361be01.chunk.js"
   ]
 }

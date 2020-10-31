@@ -1,6 +1,5 @@
 import React from 'react';
-import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
-import browserHistory from './utils/browserHistory';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
 import Navbar from './components/Navbar';

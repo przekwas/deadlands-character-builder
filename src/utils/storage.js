@@ -1,6 +1,6 @@
 export const STORAGE_KEY = 'data';
 export const VERSION_KEY = 'vkey';
-export const VERSION = 1.7;
+export const VERSION = 1.8;
 
 export const cramItIn = (stateStorage, versionStorage) => {
 	const data = JSON.stringify(stateStorage);

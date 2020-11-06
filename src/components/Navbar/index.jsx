@@ -68,6 +68,7 @@ const Navbar = () => {
 					<NavItem to={process.env.PUBLIC_URL + '/edges'} text="Edges" />
 					<NavItem to={process.env.PUBLIC_URL + '/traits'} text="Traits" />
 					<NavItem to={process.env.PUBLIC_URL + '/pins'} text="Pins" />
+					<NavItem to={process.env.PUBLIC_URL + '/perks'} text="Perks" />
 					<li onClick={handleModal} className="nav-item">
 						<span className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-red-200 uppercase cursor-pointer hover:opacity-75">
 							<span className="ml-2">Reset All</span>

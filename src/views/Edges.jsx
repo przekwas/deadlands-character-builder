@@ -29,6 +29,8 @@ const Edges = () => {
 							edge.requirements.includes(filter)
 						) {
 							return true;
+						} else {
+							return false;
 						}
 					})
 					.map(edge => (

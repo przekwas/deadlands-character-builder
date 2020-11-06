@@ -27,15 +27,15 @@ const PointsBar = () => {
 				</span>
 			</span>
 			<span>
-				<span className="text-xs font-semibold tracking-tighter">$</span>{' '}
+				<span className="text-xs font-semibold tracking-tighter">{points.perks.name}</span>{' '}
 				<span className="text-sm tracking-wider text-green-300">
-					{points.wealth.value}/{points.wealth.max}
+					{points.perks.value}/{points.perks.max}
 				</span>
 			</span>
 			<span>
-				<span className="text-xs font-semibold tracking-tighter">{points.load.name}</span>{' '}
+				<span className="text-xs font-semibold tracking-tighter">$</span>{' '}
 				<span className="text-sm tracking-wider text-green-300">
-					{points.load.value}/{points.load.max}
+					{points.wealth.value}/{points.wealth.max}
 				</span>
 			</span>
 		</div>

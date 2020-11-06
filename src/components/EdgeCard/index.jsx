@@ -1,22 +1,33 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch, batch } from 'react-redux';
 import { pinEdge } from '../../features/pins/pinsSlice';
+import { spend } from '../../features/points/pointsSlice';
 import { errorToast, successToast } from '../Toast';
 import { GiPin } from 'react-icons/gi';
 
 const EdgeCard = ({ edge, pinnable }) => {
 	const dispatch = useDispatch();
 	const edges = useSelector(state => state.pins.edges);
+	const edgePoints = useSelector(state => state.points.edge);
 
 	const handlePin = edge => {
 		const found = edges.find(searching => searching.id === edge.id);
 		if (found) {
 			errorToast('Edge already pinned!');
 			return;
-		} else {
-			successToast('Edge pinned!');
-			dispatch(pinEdge(edge));
 		}
+
+		if (edgePoints.value === 0) {
+			errorToast('Out of Edge Points!');
+			return;
+		}
+
+		successToast('Edge pinned!');
+		batch(() => {
+			dispatch(pinEdge(edge));
+			dispatch(spend({ key: 'edge', value: 1 }));
+		});
+		
 	};
 
 	return (

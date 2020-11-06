@@ -25,6 +25,11 @@ const initialState = {
 		name: 'Load',
 		value: 0,
 		max: 500
+	},
+	perks: {
+		name: 'Perks',
+		value: 4,
+		max: 4
 	}
 };
 
@@ -38,10 +43,20 @@ const pointsSlice = createSlice({
 		refund: (state, action) => {
 			state[action.payload.key].value += action.payload.value;
 		},
+		perked: (state, action) => {
+			state[action.payload.key].value += action.payload.value;
+			state[action.payload.key].max += action.payload.value;
+			state.perks.value -= action.payload.cost;
+		},
+		unperked: (state, action) => {
+			state[action.payload.key].value -= action.payload.value;
+			state[action.payload.key].max -= action.payload.value;
+			state.perks.value += action.payload.cost;
+		},
 		reset: state => initialState
 	}
 });
 
-export const { spend, refund, reset } = pointsSlice.actions;
+export const { spend, refund, perked, unperked, reset } = pointsSlice.actions;
 
 export default pointsSlice.reducer;

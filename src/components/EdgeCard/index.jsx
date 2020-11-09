@@ -45,10 +45,8 @@ const EdgeCard = ({ edge, pinnable }) => {
 					</span>
 				)}
 				<div className="px-8 py-4">
-					{edge.requirements && (
-						<div className="text-xs font-hairline text-red-700">Requirements</div>
-					)}
-					<div className="font-extrabold text-orange-900">{edge.requirements}</div>
+					<div className="text-xs font-hairline text-red-700">Requirements</div>
+					<div className="font-extrabold text-orange-900">{ edge.requirements ? edge.requirements : 'None'}</div>
 					<div className={`${edge.requirements && 'mt-4'} text-xl`}>{edge.summary}</div>
 				</div>
 			</div>

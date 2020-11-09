@@ -168,3 +168,4 @@ export const {
 } = traitsSlice.actions;
 
 export default traitsSlice.reducer;
+export const skillsList = initialState;

@@ -31,3 +31,6 @@ v1.8
 Fixed Pins screen to flex pinned cards like they should (vertical mobile, 1/3 w on desktop)
 Fixed z-index issue with Points Bar having text sit on top it
 Styled Toasts to have a Tailwind look
+
+v1.9
+Updated filters with more options

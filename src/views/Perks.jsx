@@ -69,9 +69,7 @@ const Perks = () => {
 				</div>
 			</div>
 			<div className="w-3/4 my-2 border border-red-900 rounded-full" />
-			<div>
-				Here
-			</div>
+			<div>Here</div>
 		</div>
 	);
 };
